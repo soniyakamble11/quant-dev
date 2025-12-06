@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.4">
+  <diagram id="diagram-1" name="Architecture">
+    <mxGraphModel dx="1042" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ds" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fillColor=#d0e6ff;strokeColor=#2b6cb0;" value="Binance Futures WebSocket&#xa;(Tick Data: timestamp, price, qty, symbol)" vertex="1">
+          <mxGeometry height="80" width="260" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ingest" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fillColor=#ffebc8;strokeColor=#d97706;" value="Async WebSocket Ingestion&#xa;- asyncio thread&#xa;- per-symbol consumers&#xa;- clean normalization&#xa;- failover + reconnect" vertex="1">
+          <mxGeometry height="130" width="300" x="340" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="buffer" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fillColor=#fff3b0;strokeColor=#b45309;" value="In-Memory Tick Buffer&#xa;- bounded list (20k)&#xa;- thread-safe append&#xa;- snapshot API&#xa;- used by analytics + UI" vertex="1">
+          <mxGeometry height="110" width="300" x="340" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="analytics" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fillColor=#e6d8ff;strokeColor=#7c3aed;" value="Analytics Engine&#xa;- Resample → OHLC (1s,1m,5m)&#xa;- OLS / Kalman / Robust Hedge&#xa;- Risk Metrics (Sharpe, Hurst)&#xa;- Microstructure &amp; Liquidity&#xa;- ADF stationarity test" vertex="1">
+          <mxGeometry height="220" width="320" x="700" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ui" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fillColor=#d1fae5;strokeColor=#059669;" value="Streamlit Dashboard&#xa;- Live Data + Microstructure&#xa;- Charts: Volatility, Spread, Z-Score&#xa;- Analytics: Heatmap, Risk&#xa;- Strategy Monitor (Backtest)&#xa;- Alerts + Export" vertex="1">
+          <mxGeometry height="220" width="320" x="1060" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="upload" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e0f2ff;strokeColor=#0369a1;" value="Uploaded CSV (offline OHLC)" vertex="1">
+          <mxGeometry height="60" width="260" x="1180" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#ffe5eb;strokeColor=#be123c;" value="Optional: DB / Storage Layer&#xa;(SQLite / Parquet / ClickHouse)" vertex="1">
+          <mxGeometry height="60" width="320" x="610" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" source="ds" style="edgeStyle=orthogonalEdgeStyle;rounded=0;strokeColor=#2b6cb0;" target="ingest">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" source="ingest" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#d97706;" target="buffer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" source="buffer" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#7c3aed;" target="analytics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" source="upload" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#0369a1;" target="analytics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" source="analytics" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#059669;" target="ui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" source="analytics" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#be123c;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ann1" parent="1" style="whiteSpace=wrap;html=1;strokeColor=none;fontColor=#6b7280;fontSize=12;" value="Threaded asyncio ensures UI stays responsive" vertex="1">
+          <mxGeometry height="30" width="300" x="340" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ann2" parent="1" style="whiteSpace=wrap;html=1;strokeColor=none;fontColor=#6b7280;fontSize=12;" value="Modular design (Kalman, Backtest, Risk impl.)" vertex="1">
+          <mxGeometry height="30" width="320" x="700" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ann3" parent="1" style="whiteSpace=wrap;html=1;strokeColor=none;fontColor=#6b7280;fontSize=12;" value="Interactive widgets + auto-refresh + alerts" vertex="1">
+          <mxGeometry height="30" width="320" x="1060" y="260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

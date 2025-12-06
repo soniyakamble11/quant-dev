@@ -1,0 +1,53 @@
+2025-12-06 23:38:24,827 INFO:Collector started: btcusdt,ethusdt
+2025-12-06 23:39:52,971 INFO:Collector stopped
+2025-12-06 23:40:00,996 ERROR:Task was destroyed but it is pending!
+task: <Task pending name='Task-168408' coro=<Connection.keepalive() running at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\site-packages\websockets\asyncio\connection.py:815> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-12-06 23:44:20,408 INFO:CSV uploaded and parsed
+2025-12-06 23:46:09,178 INFO:Collector started: btcusdt,ethusdt
+2025-12-06 23:56:31,728 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 00:22:23,953 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 00:23:53,826 INFO:Collector stopped
+2025-12-07 00:24:03,579 ERROR:Task was destroyed but it is pending!
+task: <Task pending name='Task-273' coro=<Connection.keepalive() running at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\site-packages\websockets\asyncio\connection.py:815> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-12-07 00:30:15,620 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 00:34:45,154 INFO:Collector stopped
+2025-12-07 00:34:52,758 ERROR:Task was destroyed but it is pending!
+task: <Task pending name='Task-500' coro=<Connection.keepalive() running at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\site-packages\websockets\asyncio\connection.py:815> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-12-07 00:47:23,553 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 00:47:58,751 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 00:49:53,187 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 00:50:03,257 INFO:Collector stopped
+2025-12-07 00:50:10,657 ERROR:Task was destroyed but it is pending!
+task: <Task pending name='Task-45336' coro=<Connection.keepalive() running at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\site-packages\websockets\asyncio\connection.py:815> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-12-07 00:50:35,314 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:05:21,229 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:11:56,549 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:13:12,024 INFO:Collector stopped
+2025-12-07 01:13:20,832 ERROR:Task was destroyed but it is pending!
+task: <Task pending name='Task-17492' coro=<Connection.keepalive() running at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\site-packages\websockets\asyncio\connection.py:822> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py:975, Task.task_wakeup()]>>
+2025-12-07 01:14:23,449 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:14:26,984 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:14:42,432 INFO:Collector stopped
+2025-12-07 01:14:53,293 ERROR:Task was destroyed but it is pending!
+task: <Task pending name='Task-25345' coro=<Connection.keepalive() running at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\site-packages\websockets\asyncio\connection.py:822> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py:975, Task.task_wakeup()]>>
+2025-12-07 01:14:55,706 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:15:32,437 INFO:Collector stopped
+2025-12-07 01:15:40,315 ERROR:Task was destroyed but it is pending!
+task: <Task pending name='Task-27388' coro=<Connection.keepalive() running at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\site-packages\websockets\asyncio\connection.py:822> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py:975, Task.task_wakeup()]>>
+2025-12-07 01:17:48,153 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:22:02,340 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:25:47,682 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:29:28,840 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:33:07,014 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:36:24,851 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:43:05,339 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:44:08,817 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 01:46:48,924 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 02:01:12,207 INFO:Collector stopped
+2025-12-07 02:01:20,433 ERROR:Task was destroyed but it is pending!
+task: <Task pending name='Task-128065' coro=<Connection.keepalive() running at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\site-packages\websockets\asyncio\connection.py:815> wait_for=<Future pending cb=[Task.task_wakeup()]>>
+2025-12-07 02:09:15,092 INFO:Collector started: btcusdt,ethusdt
+2025-12-07 02:14:54,993 INFO:Collector stopped
+2025-12-07 02:15:02,295 ERROR:Task was destroyed but it is pending!
+task: <Task pending name='Task-1031' coro=<Connection.keepalive() running at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\site-packages\websockets\asyncio\connection.py:822> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at C:\Users\skamb\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py:975, Task.task_wakeup()]>>
+2025-12-07 02:15:27,236 INFO:Buffer cleared
