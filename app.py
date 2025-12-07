@@ -9,7 +9,7 @@ except Exception:
     pass
 
 
-import streamlit as st
+
 import pandas as pd
 import numpy as np
 import time
@@ -19,6 +19,7 @@ from datetime import datetime, timezone
 import plotly.express as px
 import plotly.graph_objects as go
 import statsmodels.api as sm
+
 
 # ---------------- Auto-refresh (2s) ----------------
 _HAS_AUTOREF = False
@@ -70,7 +71,7 @@ from analytics import compute_ols_hedge, compute_spread_zscore, run_adf, resampl
 from utils import df_to_csv
 
 # -------------------- Page Setup ----------------------
-st.set_page_config(page_title="Quant Research Dashboard", layout="wide")
+
 
 # Title
 st.markdown("""
