@@ -1,3 +1,5 @@
+import streamlit as st
+st.set_page_config(page_title="Quant Research Dashboard", layout="wide")
 
 import asyncio
 # Fix Windows event-loop issues for websockets
